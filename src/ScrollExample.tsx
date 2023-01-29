@@ -21,7 +21,10 @@ function ScrollExample() {
       <FancyDiv ref={divRef} type='div prop type'>
         <div>{inputText}</div>
       </FancyDiv>
-      {isScroll && <div>scroll visible!</div>}
+      <div className="border">
+        <h5>other component</h5>
+        {isScroll && <div>scroll visible!</div>}
+      </div>
     </div>
   );
 }

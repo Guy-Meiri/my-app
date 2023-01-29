@@ -1,4 +1,5 @@
 import React, { useRef } from 'react'
+import Form from './Form';
 import "./index.css"
 
 export default function RefExample() {
@@ -11,7 +12,7 @@ export default function RefExample() {
 
     return (
         <div className='flex'>
-            <input />
+            <Form />
             <button onClick={focusOnInput}>focus on next input</button>
             <input ref={inputRef} />
         </div>

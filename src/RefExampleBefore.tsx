@@ -1,13 +1,15 @@
-import { useRef } from 'react';
+import Form from './Form';
 
 export default function RefExampleBefore() {
-    
+
 
     return (
         <div className='flex'>
-            <input />
-            <button > focus  down</button>
-            <input />
+            <div className=' form flex'>
+                <Form />
+                <button > Submit</button>
+            </div>
+            <input placeholder='next' />
         </div>
     )
 }

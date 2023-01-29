@@ -8,10 +8,14 @@ export type DivRef = HTMLDivElement;
 
 const DivForRef: React.ForwardRefRenderFunction<DivRef, DivProps> = (props, ref) => {
   return (
-    <div className="textArea"
-      ref={ref}
-    >
-      {props.children}
+    <div className="flex2">
+      <h5>keyword List</h5>
+      <div className="textArea"
+        ref={ref}
+      >
+
+        {props.children}
+      </div>
     </div>
   );
 };
