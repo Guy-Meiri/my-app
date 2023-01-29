@@ -1,5 +1,5 @@
 import { forwardRef, ReactNode } from 'react';
-
+import "./index.css"
 interface DivProps {
   children?: ReactNode;
   type: string;
@@ -7,18 +7,8 @@ interface DivProps {
 export type DivRef = HTMLDivElement;
 
 const DivForRef: React.ForwardRefRenderFunction<DivRef, DivProps> = (props, ref) => {
-  console.log(`type from props: ${props.type}`);
   return (
-    <div
-      style={{
-        margin: '40px',
-        border: '1px solid black',
-        maxHeight: '50px',
-        overflowX: 'hidden',
-        overflowY: 'auto',
-        width: '100px',
-        minHeight: '40px',
-      }}
+    <div className="textArea"
       ref={ref}
     >
       {props.children}
