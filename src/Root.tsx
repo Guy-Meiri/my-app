@@ -7,8 +7,8 @@ export function Root() {
 
   return (
     <>
-      {/* <RefExampleBefore /> */}
-      <ScrollExample />
+      <RefExampleBefore />
+      {/* <ScrollExample /> */}
     </>
   );
 }
