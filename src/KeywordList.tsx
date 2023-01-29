@@ -6,7 +6,7 @@ interface DivProps {
 }
 export type DivRef = HTMLDivElement;
 
-const DivForRef: React.ForwardRefRenderFunction<DivRef, DivProps> = (props, ref) => {
+const KeywordListRef: React.ForwardRefRenderFunction<DivRef, DivProps> = (props, ref) => {
   return (
     <div className="flex2">
       <h6>Keyword List</h6>
@@ -18,4 +18,4 @@ const DivForRef: React.ForwardRefRenderFunction<DivRef, DivProps> = (props, ref)
     </div>
   );
 };
-export const FancyDiv = forwardRef<DivRef, DivProps>(DivForRef);
+export const KeywordList = forwardRef<DivRef, DivProps>(KeywordListRef);

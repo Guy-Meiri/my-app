@@ -1,29 +1,29 @@
 import React, { createRef, useEffect, useState } from 'react';
-import { FancyDiv } from './FancyDiv';
+import { KeywordList } from './KeywordList';
 
 function ScrollExample() {
   const divRef = createRef<HTMLDivElement>();
   const [inputText, setInputText] = useState('');
-  const [isScroll, setIsScroll] = useState(true);
+  const [shouldShowMore, setShouldShowMore] = useState(true);
 
   useEffect(() => {
     if (divRef.current) {
       const isCurrentlyScroll = divRef.current.scrollHeight > divRef.current.clientHeight;
-      if (isCurrentlyScroll != isScroll) {
-        setIsScroll(isCurrentlyScroll);
+      if (isCurrentlyScroll != shouldShowMore) {
+        setShouldShowMore(isCurrentlyScroll);
       }
     }
-  }, [divRef, isScroll]);
+  }, [divRef, shouldShowMore]);
 
   return (
     <div className='flex'>
       <input value={inputText} placeholder="enter text here" onChange={(e) => setInputText(e.target.value)} />
-      <FancyDiv ref={divRef} type='div prop type'>
+      <KeywordList ref={divRef} type='div prop type'>
         <div>{inputText}</div>
-      </FancyDiv>
+      </KeywordList>
       <div className="border">
         <h6>Other component</h6>
-        {isScroll && <div>SHOW MORE!</div>}
+        {shouldShowMore && <div>SHOW MORE!</div>}
       </div>
     </div>
   );
