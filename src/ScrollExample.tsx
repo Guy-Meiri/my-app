@@ -22,8 +22,8 @@ function ScrollExample() {
         <div>{inputText}</div>
       </FancyDiv>
       <div className="border">
-        <h5>other component</h5>
-        {isScroll && <div>scroll visible!</div>}
+        <h6>Other component</h6>
+        {isScroll && <div>SHOW MORE!</div>}
       </div>
     </div>
   );
