@@ -18,6 +18,9 @@ code {
   column-gap: '20px';
   row-gap: 20px;
   padding: 10px;
+  margin-left: 25%;
+  width: 50%;
+  left: auto;
 }
 
 .textArea {
@@ -34,7 +37,7 @@ code {
 input:focus {
   outline: none !important;
   border: 1px solid blue;
-  box-shadow: 0 0 10px #719ece;
+  box-shadow: 0 0 5px #719ece;
 }
 
 button {
@@ -73,4 +76,12 @@ button {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.father {
+  color: blue;
+}
+
+.keywordList {
+  color: green;
 }

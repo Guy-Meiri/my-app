@@ -8,23 +8,21 @@ function ScrollExample() {
 
   useEffect(() => {
     if (divRef.current) {
-      const isCurrentlyScroll = divRef.current.scrollHeight > divRef.current.clientHeight;
-      if (isCurrentlyScroll != shouldShowMore) {
-        setShouldShowMore(isCurrentlyScroll);
+      const newIsShowMore = divRef.current.scrollHeight > divRef.current.clientHeight;
+      if (newIsShowMore !== shouldShowMore) {
+        setShouldShowMore(newIsShowMore);
       }
     }
   }, [divRef, shouldShowMore]);
 
   return (
-    <div className='flex'>
+    <div className='flex border'>
       <input value={inputText} placeholder="enter text here" onChange={(e) => setInputText(e.target.value)} />
+      <h6 className='father'>Father component</h6>
+      {shouldShowMore && <div>SHOW MORE!</div>}
       <KeywordList ref={divRef} type='div prop type'>
         <div>{inputText}</div>
       </KeywordList>
-      <div className="border">
-        <h6>Other component</h6>
-        {shouldShowMore && <div>SHOW MORE!</div>}
-      </div>
     </div>
   );
 }
