@@ -2,8 +2,8 @@ import Form from './Form';
 
 export default function RefExampleBefore() {
     return (
-        <div className='flex'>
-            <div className=' form flex'>
+        <div className='flex-form'>
+            <div className=' form flex-form'>
                 <Form />
                 <button> Submit</button>
             </div>

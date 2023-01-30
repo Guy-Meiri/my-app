@@ -18,9 +18,19 @@ code {
   column-gap: '20px';
   row-gap: 20px;
   padding: 10px;
-  margin-left: 25%;
-  width: 50%;
-  left: auto;
+}
+
+.flex-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  column-gap: '20px';
+  row-gap: 20px;
+  padding: 10px;
+  /* margin-left: 25%; */
+  /* width: 50%; */
+  /* left: auto; */
 }
 
 .textArea {
